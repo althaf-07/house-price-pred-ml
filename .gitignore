@@ -1,0 +1,11 @@
+# Files
+**/.directory
+
+# Directories
+**/__pycache__/
+.ruff_cache/
+.venv/
+data/
+logs/
+models/
+tmp/

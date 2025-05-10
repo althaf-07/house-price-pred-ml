@@ -1,0 +1,49 @@
+col_names_renamed:
+  Bathrooms: bathrooms
+  Bedrooms: bedrooms
+  Neighborhood: neighborhood
+  Price: price
+  SquareFeet: square_feet
+  YearBuilt: year_built
+cols:
+  cat:
+  - neighborhood
+  numc:
+  - square_feet
+  - year_built
+  numd:
+  - bedrooms
+  - bathrooms
+  target: price
+model:
+  hyper_params:
+    max_depth: 10
+    n_estimators: 100
+    random_state: 42
+  name: rfc
+paths:
+  data:
+    interim:
+      test: data/interim/test.csv
+      train: data/interim/train.csv
+    processed:
+      test: data/processed/test.csv
+      train: data/processed/train.csv
+    raw:
+      entire_data: data/raw/entire_data.csv
+      test: data/raw/test.csv
+      train: data/raw/train.csv
+  models: models/
+  reports:
+    experiment_document: reports/experiment_document.md
+    univariate: reports/figures/univariate/
+preprocessing:
+  oe:
+    neighborhood:
+    - rural
+    - suburb
+    - urban
+  scaler: standard
+train_test_split:
+  random_state: 37
+  test_size: 0.2
