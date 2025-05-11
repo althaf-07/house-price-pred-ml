@@ -1,7 +1,7 @@
 # House Price Prediction
 
 ![Python](https://img.shields.io/badge/python-3.12-blue)
-![Last Commit](https://img.shields.io/github/last-commit/althaf-07/house-price-prediction)
+![Last Commit](https://img.shields.io/github/last-commit/althaf-07/house-price-pred-ml)
 
 ## Project Overview
 
@@ -14,7 +14,35 @@
 
 ## Getting Started
 
-To set up the project and get it running locally, follow the steps in [reports/environment.md](reports/environment.md).
+To set up the project and get it running locally, follow the steps below.
+
+1. **Install the Prerequisites**
+
+    Ensure that all the prerequisites mentioned below are installed and set up on your machine:
+
+    - [**Git** (for version control)](https://git-scm.com/downloads)
+    - [**VS Code** (the code editor)](https://code.visualstudio.com/download)
+    - [**Docker** (for containerization)](https://docs.docker.com/engine/install/)
+    - [**Dev Containers VS Code extension** (for working inside a containerized environment)](https://code.visualstudio.com/docs/devcontainers/containers#_installation)
+    - [**Dev Container CLI** (for opening dev container in VS Code)](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli#_installation)
+
+2. **Clone the Repository**
+
+    Once the prerequisites are ready, you can clone the repository using one of the following commands:
+
+    - **Clone via HTTPS**:
+
+        ```bash
+        git clone https://github.com/althaf-07/house-price-pred-ml.git && devcontainer open house-price-pred-ml
+        ```
+
+    - **Clone via SSH**:
+
+        ```bash
+        git clone git@github.com:althaf-07/house-price-pred-ml.git && devcontainer open house-price-pred-ml
+        ```
+
+    After running one of these commands, the repository will be cloned and automatically opened inside a Dev Container.
 
 ---
 

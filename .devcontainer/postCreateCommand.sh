@@ -1,9 +1,17 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-# Install dependencies
+FILE="data/raw/entire_data.csv"
+
+if [ ! -f "$FILE" ]; then
+    echo "Downloading dataset..."
+    uvx gdown \
+        --fuzzy "https://drive.google.com/file/d/1y7ZwhqZAKoSLRhYJkebAbi9QXUj0RZcx/view?usp=sharing" \
+        -O $(dirname "$FILE")/
+    echo "Dataset downloaded"
+else
+    echo "Dataset already exists at $FILE"
+fi
+
+echo "Installing dependencies..."
 uv sync
-
-# Download dataset
-uvx gdown \
-    --fuzzy "https://drive.google.com/file/d/1y7ZwhqZAKoSLRhYJkebAbi9QXUj0RZcx/view?usp=sharing" \
-    -O data/raw/
+echo "Installed all dependencies"

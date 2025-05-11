@@ -1,20 +1,21 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Python 3",
+	"name": "althaf-07/house-price-pred-ml",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "build": {"dockerfile": "./Dockerfile"},
+
+    "runArgs": [
+        "--env-file",".devcontainer/devcontainer.env",
+        "--name", "dc_althaf-07_house-price-pred-ml"
+    ],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
         "ghcr.io/devcontainers/features/common-utils:2":{
             "installZsh": false,
             "installOhMyZsh": false,
-            "installOhMyZshConfig": false,
-            "username": "vscode",
-            "userUid": "1000",
-            "userGid": "1000",
-            "upgradePackages": true
+            "installOhMyZshConfig": false
         },
         "ghcr.io/devcontainers/features/python:1": {
             "installTools": false
@@ -36,8 +37,9 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
 
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "containerUser": "vscode",
 	"remoteUser": "vscode"
 }
