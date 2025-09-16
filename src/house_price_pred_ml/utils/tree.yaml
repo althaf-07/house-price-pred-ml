@@ -1,0 +1,61 @@
+.devcontainer/: Dev Container directory
+.devcontainer/devcontainer.env: Dev Container environment variables file
+.devcontainer/devcontainer.json: Dev Container configurations file
+.devcontainer/Dockerfile: Dev Container Dockerfile
+.devcontainer/post_create_script.sh: Post-build setup script file
+
+.editorconfig: Editor configuration rules file
+.gitattributes: Git attributes file
+.gitignore: Git ignore rules file
+.pre-commit-config.yaml: Pre-commit hook configuration YAML file
+.python-version: Python version specification file
+CONTRIBUTING.md: Contribution guidelines file
+Dockerfile: Deployment build instructions Dockerfile
+pyproject.toml: Python dependencies and build configuration file
+README.md: Project documentation and usage instructions file
+uv.lock: uv dependency lock file
+
+.git/: Git directory
+.venv/: Python virtual environment directory
+
+data/: Datasets directory
+data/interim/: Intermediate cleaned datasets directory
+data/interim/interim.csv: Cleaned intermediate dataset CSV file
+data/processed/: Train-test split datasets directory
+data/processed/test.csv: Test dataset CSV file
+data/processed/train.csv: Training dataset CSV file
+data/raw/: Raw and unprocessed datasets directory
+data/raw/raw.csv: Original raw dataset CSV file
+
+logs/: Log files directory
+
+notebooks/: Jupyter notebooks directory
+
+private/: Private files directory
+
+reports/: Reports and documentation directory
+reports/figures/: Generated figures directory
+reports/figures/univariate/: Univariate analysis figures directory
+
+src/: Source code directory
+src/house_price_pred_ml/: Main Python package directory
+src/house_price_pred_ml/plot/: Plotting scripts directory
+src/house_price_pred_ml/plot/univariate/: Univariate plotting scripts directory
+# src/house_price_pred_ml/plot/univariate/cat_numd.py: Categorical vs numerical plots script file
+src/house_price_pred_ml/plot/univariate/numc.py: Continuous numerical plots script file
+src/house_price_pred_ml/utils/: Utility modules directory
+src/house_price_pred_ml/utils/functions.py: General utility functions file
+src/house_price_pred_ml/utils/logger.py: Logger configuration file
+src/house_price_pred_ml/utils/tree.py: Project directory tree generator script file
+src/house_price_pred_ml/utils/tree.yaml: Directory descriptions file
+src/house_price_pred_ml/__init__.py: Package initializer file
+src/house_price_pred_ml/app.py: API endpoints for model serving script file
+src/house_price_pred_ml/clean_data.py: Data cleaning script file
+src/house_price_pred_ml/config.py: Configurations loader script file
+src/house_price_pred_ml/config.yaml: Configurations file
+src/house_price_pred_ml/evaluate.py: Model evaluation script file
+src/house_price_pred_ml/ingest_data.py: Data ingestion script file
+src/house_price_pred_ml/main.py: Main entry point script file
+src/house_price_pred_ml/predict.py: Model prediction script file
+src/house_price_pred_ml/split_data.py: Train-test data split script file
+src/house_price_pred_ml/train.py: Model training script file

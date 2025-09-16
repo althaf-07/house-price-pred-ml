@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+branch_name=$(git branch --show-current)
+branch_regex='^(feature|bugfix|hotfix|release|chore)/((issue-[0-9]+-)?[a-z0-9.-]+)$'
+
+error() {
+    echo "Invalid branch name: '$branch_name'." >&2
+    echo "Branch names must match: $branch_regex." >&2
+}
+
+suggest_action() {
+    if [[ $branch_name == main ]]; then
+        echo "Switch to a new branch: git switch -c <new-branch-name>"
+    else
+        echo "Rename your branch: git branch -m <new-branch-name>"
+    fi
+}
+
+if [[ ! $branch_name =~ $branch_regex ]]; then
+    error
+    suggest_action
+    exit 1
+fi
+
+exit 0

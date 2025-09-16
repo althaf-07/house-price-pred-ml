@@ -1,0 +1,24 @@
+{
+    "json.format.keepLines": true,
+    "markdown.extension.toc.updateOnSave": false,
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "files.exclude": {
+        // Directories
+        ".cache": true,
+        ".git": true,
+        ".ruff_cache": true,
+        ".venv": true,
+        "node_modules": true,
+        "**/__pycache__": true,
+
+        // Files
+        "**/.directory": true
+    },
+
+    // Auto-select kernel for Jupyter Notebooks. See https://github.com/microsoft/vscode/issues/130946#issuecomment-1899389049.
+    "jupyter.kernels.excludePythonEnvironments": [
+        "/bin/python3",
+        "/usr/bin/python3",
+        "/usr/local/bin/python"
+    ]
+}

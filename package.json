@@ -1,0 +1,10 @@
+{
+    "name": "house-price-pred-ml",
+    "version": "0.1.0",
+    "description": "ML for house-price-pred project",
+    "license": "MIT",
+    "author": "Althaf Muhammad",
+    "devDependencies": {
+        "prettier": "^3.6.2"
+    }
+}

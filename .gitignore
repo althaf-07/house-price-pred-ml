@@ -1,0 +1,14 @@
+# Directories
+/.cache/
+/.ruff_cache/
+/.venv/
+/data/
+/logs/
+/models/
+/node_modules/
+/private/
+/reports/figures/
+__pycache__/
+
+# Files
+.directory
